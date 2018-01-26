@@ -1,0 +1,11 @@
+<p>liste</p>
+<ul>
+  <li *ngFor="let u of appService.list">{{u.name}}</li>
+</ul>
+
+<div *ngFor="let u of appService.list">
+  <input type="text" name={{u.id}} value={{u.name}} #test>
+  <input type="submit" value="Modifier" (click)="appService.modifier(test.name,test.value)">
+  <input type="submit" value="Supprimer" (click)="appService.supprimer(test.value)">
+
+</div>

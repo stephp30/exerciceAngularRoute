@@ -1,0 +1,20 @@
+<mat-toolbar color="primary" fxLayoutAlign="space-between center" fxLayout="row">
+    
+    <h1>Site</h1>
+
+<button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>more_vert</mat-icon></button>
+
+</mat-toolbar>
+
+<mat-menu #menu="matMenu">
+
+
+
+  <button mat-menu-item [style.color]="appService.selectedMenu == 'home' ? 'red' : 'black' " routerLink="/"><mat-icon> home </mat-icon>Home</button>
+  <button mat-menu-item [style.color]="appService.selectedMenu == 'skills' ? 'red' : 'black' " routerLink="/skills"><mat-icon> reorder </mat-icon>Skills</button>
+  <button mat-menu-item [style.color]="appService.selectedMenu == 'experiences' ? 'red' : 'black' " routerLink="/experiences"><mat-icon> remove </mat-icon>Experiences</button>
+  <button mat-menu-item [style.color]="appService.selectedMenu == 'contact' ? 'red' : 'black' " routerLink="/contacts"><mat-icon> contacts </mat-icon>Contact</button>
+  <button mat-menu-item [style.color]="appService.selectedMenu == 'todo' ? 'red' : 'black' " routerLink="/todo"><mat-icon> list </mat-icon>Todo</button>
+
+
+</mat-menu>

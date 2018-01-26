@@ -1,0 +1,6 @@
+<mat-toolbar color="primary"  fxLayout="row">
+   
+    <button mat-menu-item [style.color]="appService.selectedMenu == 'legal' ? 'red' : 'black' " routerLink="/legal">Legal</button>
+    <button mat-menu-item [style.color]="appService.selectedMenu == 'credits' ? 'red' : 'black' " routerLink="/credits">Credits</button>
+
+</mat-toolbar>
